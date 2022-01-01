@@ -7,7 +7,10 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
-    return rotated_array_search_recursive(input_list, 0, len(input_list)-1, number)
+    if len(input_list) < 1:
+        return -1
+    else:
+        return rotated_array_search_recursive(input_list, 0, len(input_list)-1, number)
         
 def rotated_array_search_recursive(input_list, start, end, number):
     if start == end:
@@ -33,7 +36,7 @@ def rotated_array_search_recursive(input_list, start, end, number):
         else:
             return start
     
-def binary_serach_recursive(input_list, start, end, number):
+def binary_search_recursive(input_list, start, end, number):
     if start == end:
         if input_list[start] == number:
             return start
@@ -43,9 +46,9 @@ def binary_serach_recursive(input_list, start, end, number):
     if input_list[mid] == number:
         return mid
     elif input_list[mid] < number:
-        return binary_serach_recursive(input_list, mid + 1, end, number)
+        return binary_search_recursive(input_list, mid + 1, end, number)
     else:
-        return binary_serach_recursive(input_list, start, mid -1, number)  
+        return binary_search_recursive(input_list, start, mid -1, number)  
 
 def linear_search(input_list, number):
     for index, element in enumerate(input_list):
@@ -61,8 +64,17 @@ def test_function(test_case):
     else:
         print("Fail")
 
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+print(rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 6))
+#0 
+
+print(rotated_array_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))
+#5 
+
+print(rotated_array_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0)) 
+#-1
+
+print(rotated_array_search([], 0)) #edge case
+#-1
+
+print(rotated_array_search([0], 0)) #edge case
+#0

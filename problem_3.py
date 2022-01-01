@@ -7,6 +7,10 @@ def rearrange_digits(input_list):
     Returns:
        (int),(int): Two maximum sums
     """
+    #Edge case
+    if len(input_list) < 2:
+        return None
+    # quick sort
     quicksort(input_list)
     first = 0
     second = 0
@@ -53,8 +57,6 @@ def quicksort(items):
     sort_all(items, 0, len(items) - 1)
 
 
-
-
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
     solution = test_case[1]
@@ -64,8 +66,17 @@ def test_function(test_case):
     else:
         print("Fail")
 
+print(rearrange_digits([1, 2, 3, 4, 5]))
+#[531, 42]
 
+print(rearrange_digits([4, 6, 2, 9, 5, 8]))
+#[852, 964]
 
+print(rearrange_digits([])) #Edge case
+#None
 
-test_function([[1, 2, 3, 4, 5], [542, 31]])
-test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
+print(rearrange_digits([1])) #Edge Case
+#None
+
+print(rearrange_digits([1, 2]))
+#[1, 2]
