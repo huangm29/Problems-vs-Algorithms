@@ -6,14 +6,17 @@ Modular Complexity Analysis:
 Add a handler for a path/ Insert a path in the Trie:
 
 Time complexity: O(N), where N is the depth of the subdirectories as we traverse through the tree.
+
 Space complexity: O(N), where N is the depth of the subdirectories as we traverse through the tree.
 
 Finding a node/ Look up a path
 
 Time complexity: O(N), where N is the height of subdirectories as we traverse through the tree.
+
 Space complexity: O(1), no space required
 
 Splitting the path:
 
 Time complexity: O(1).
+
 Space complexity: O(N),  where N is the height of subdirectories as we traverse through the tree.
