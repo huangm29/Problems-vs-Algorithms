@@ -4,6 +4,15 @@ This is a Trie problem similar to the ones from the class. Each TrieNode contain
 
 Modular Complexity Analysis:   
 
+TrieNode constructor: (TrieNode constructor):
+Time Complexity: O(1)
+Space complexity: O(1), constant space required
+
+Trie constructor: (TrieNode constructor):
+create a new TrieNode. 
+Time Complexity: O(1)
+Space complexity: O(1), constant space required
+
 Insert a character in a trienode: (TrieNode.insert)  
 Insert one element in the node of a tire.
 Time Complexity: O(1)
