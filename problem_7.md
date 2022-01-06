@@ -3,17 +3,31 @@ This is a also trie problem. The difference between this one and problem 5 is th
 
 Modular Complexity Analysis:  
 
+RouteTrieNode constructor: (RouteTrieNode.__init__)
+Time complexity: O(1).  
+Space complexity: O(1), constant space required.
+
 Add a single Node in the RouteTrie: (RouteTrieNode.insert)  
 Time complexity: O(1).  
 Space complexity: O(1).   
 
 Insert a list of subdirectories in the RouteTrie: (RouteTrie. insert)   
 Time complexity: O(N), where N is the depth of the subdirectories.    
-Space complexity: O(N), where N is the depth of the subdirectories.    
+Space complexity: O(N), where N is the depth of the subdirectories.   
+
+RouteTrie constructor: (RouteTrie.__init__)
+Create a new RouteTrieNode  
+Time complexity: O(1).    
+Space complexity: O(1), constant space required.  
 
 Find a path in the RouteTrie: (RouteTrie.find)   
 Time complexity: O(N), where N is the depth of the subdirectories as we traverse through the tree.   
 Space complexity: O(1), no space required
+
+Route constructor: (Route.__init__)
+Create a new RouteTrie and set not_found:
+Time complexity: O(1).    
+Space complexity: O(1), constant space required.
 
 Splitting the path: (Router.split_path)  
 Time complexity: O(1)   
