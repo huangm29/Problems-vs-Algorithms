@@ -9,14 +9,15 @@ Insert one element in the node of a tire.
 Time Complexity: O(1)
 Space complexity: O(1)
 
-Insert a word in a trie: (Trie. insert)  
+Insert a word in a trie: (Trie.insert)  
 Time Complexity: O(N), where N is the length of the word as we traverse through the tree.
 Space complexity: O(N) for inserting, where N is the length of the word as we traverse through the tree.
 
-Find a word in a tire (Trie. find):
+Find a word in a tire (Trie.find):
 Time Complexity: O(N) for finding a node, where N is the length of the word to search for. 
 Space complexity: O(1), no additional space required
 
-Suffix collection (TrieNode. suffix):  
+Suffix collection (TrieNode.suffixes): 
+This suffix collection iterate down through the entire trie after the current trienode. 
 Time Complexity: O(N), where N is the length of the longest suffixes.   
 Space complexity: O(N*M), where N is the length of the longest suffixes, and M is the number of suffixes.   
